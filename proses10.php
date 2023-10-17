@@ -25,9 +25,9 @@
 
         <?php
         if (isset($_POST['hitung']) && $_SERVER['REQUEST_METHOD'] == "POST") {
-            $nim = htmlspecialchars($_POST['nim']);
-            $nama = htmlspecialchars($_POST['nama']);
-            $nilai = htmlspecialchars($_POST['nilai']);
+            $nim = filter_var($_POST['nim'], FILTER_VALIDATE_INT);
+            $nama = htmlentities($_POST['nama'], ENT_QUOTES);
+            $nilai = filter_var($_POST['nilai'], FILTER_VALIDATE_INT);
             $pesanNilai = "";
 
             if ($nilai >= 81) {
@@ -59,10 +59,12 @@
                 <li>
                     Nilai : <?php echo $pesanNilai; ?>
                 </li>
-            <?php } ?>
 
-            <a href="input10.php"><button type="button">Ulangi</button></a>
+                <a href="input10.php"><button type="button">Ulangi</button></a>
             </ul>
+        <?php } else { ?>
+            <p style="color:red;">Tidak ada permintaan pada form input10.php.</p>
+        <?php } ?>
     </div>
 </body>
 
