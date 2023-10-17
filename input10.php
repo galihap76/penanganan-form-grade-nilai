@@ -28,7 +28,7 @@
 
                 <li>
                     <label for="nim">NIM : </label>
-                    <input type="text" name="nim" id="nim" maxlength="8" autocomplete="off" required>
+                    <input type="number" name="nim" id="nim" required>
                 </li>
 
                 <li>
