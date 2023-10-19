@@ -30,17 +30,19 @@
             $nilai = filter_var($_POST['nilai'], FILTER_VALIDATE_INT);
             $pesanNilai = "";
 
-            if ($nilai >= 81) {
+            if ($nilai > 100){
+                $pesanNilai .= "Nilai tidak boleh lebih dari 100.";
+            }else if ($nilai >= 81 && $nilai <= 100) {
                 $pesanNilai .= "A, dengan nilai $nilai kamu di nyatakan lulus (Y).";
-            } else if ($nilai >= 61) {
+            }else if ($nilai >= 61 && $nilai <= 80) {
                 $pesanNilai .= "B, dengan nilai $nilai kamu di nyatakan lulus (Y).";
-            } else if ($nilai >= 41) {
+            }else if ($nilai >= 41 && $nilai <= 60) {
                 $pesanNilai .= "C, dengan nilai $nilai kamu di nyatakan lulus (Y).";
-            } else if ($nilai >= 21) {
+            }else if ($nilai >= 21 && $nilai <= 40) {
                 $pesanNilai .= "D, dengan nilai $nilai kamu di nyatakan tidak lulus (N).";
-            } else if ($nilai >= 1) {
+            }else if ($nilai >= 1 && $nilai <= 20) {
                 $pesanNilai .= "E, dengan nilai $nilai kamu di nyatakan tidak lulus (N).";
-            } else {
+            }else if($nilai >= 0){
                 $pesanNilai .= "T, dengan nilai $nilai kamu di nyatakan tidak lulus (N).";
             }
 
