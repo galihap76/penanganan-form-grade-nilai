@@ -1,4 +1,7 @@
 ## Tugas Pemrograman Web 1
+
+![tugas_2_0615039104_01_55201_INF35515_20231_99559799](https://github.com/galihap76/penanganan-form-grade-nilai-mahasiswa/assets/83481679/683436c8-60d3-4056-8ee1-93bd627bec26)
+
 Repositori ini merupakan tugas untuk mata kuliah pemrograman web 1 yang di ajarkan oleh dosen pak zainul arif. Saya simpan kode nya di sini sebagai pembelajaran saya.
 
 ## Screenshots :
